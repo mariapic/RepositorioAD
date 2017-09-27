@@ -11,9 +11,10 @@ import java.io.*;
  *  obtenidos de unos arrays, se introducen de forma secuencial
  */
 
-public class IntroducirEmpleadosAlea {
+public class IntroducirEmpleadosAlea2 {
 	
 	final static int TAM_NOMBRE = 10;
+	final static int TAM_REGISTRO = 36; // 4 + 20 + 4 + 8 ID, NOMBRE, DEPT Y SAL
 	
 	public static void main(String[] args) {
 		RandomAccessFile raf = null;
@@ -25,6 +26,15 @@ public class IntroducirEmpleadosAlea {
 		try {
 			raf = new RandomAccessFile("empleados2.dat", "rw");
 			
+			int id = 0;
+			if (raf.length() > 0) {
+			//nos situamos en el último registro
+				raf.seek(raf.length() - TAM_REGISTRO);
+				
+				// leemos el id
+				id = raf.readInt();
+			}
+			
 			//nos situamos al final del fichero
 			raf.seek(raf.length());
 			
@@ -32,7 +42,7 @@ public class IntroducirEmpleadosAlea {
 			StringBuffer sb = null;
 			for (int i = 0; i < salarios.length; i++) {
 				// id
-				raf.writeInt(i + 1);
+				raf.writeInt(i + id + 1);
 				// nombre
 				sb = new StringBuffer(nombres[i]);
 				sb.setLength(TAM_NOMBRE); 
@@ -47,7 +57,7 @@ public class IntroducirEmpleadosAlea {
 			//nos situamos al principio
 			raf.seek(0);
 			
-			int id, dept;
+			int dept;
 			char[] cNombre = new char[TAM_NOMBRE];
 			String nombre;
 			double salario;
