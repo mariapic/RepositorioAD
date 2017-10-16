@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleados>
+    <empleado fec_alta="12/06/2017">
+        <id>1</id>
+        <nombre>Alberto</nombre>
+        <departamento>
+            <iddep>10</iddep>
+            <nomdep>Contabilidad</nomdep>
+            <locdep>Madrid</locdep>
+        </departamento>
+        <salario>2000.0</salario>
+    </empleado>
+    <empleado fec_alta="12/06/2017">
+        <id>2</id>
+        <nombre>Guillermo</nombre>
+        <departamento>
+            <iddep>20</iddep>
+            <nomdep>Marketing</nomdep>
+            <locdep>Sevilla</locdep>
+        </departamento>
+        <salario>1500.5</salario>
+    </empleado>
+    <empleado fec_alta="12/06/2017">
+        <id>3</id>
+        <nombre>Alejandro</nombre>
+        <departamento>
+            <iddep>30</iddep>
+            <nomdep>Comercial</nomdep>
+            <locdep>Valladolid</locdep>
+        </departamento>
+        <salario>3000.4</salario>
+    </empleado>
+    <empleado fec_alta="12/06/2017">
+        <id>4</id>
+        <nombre>Ana</nombre>
+        <departamento>
+            <iddep>20</iddep>
+            <nomdep>Marketing</nomdep>
+            <locdep>Sevilla</locdep>
+        </departamento>
+        <salario>2300.6</salario>
+    </empleado>
+    <empleado fec_alta="12/06/2017">
+        <id>5</id>
+        <nombre>Patricia</nombre>
+        <departamento>
+            <iddep>10</iddep>
+            <nomdep>Contabilidad</nomdep>
+            <locdep>Madrid</locdep>
+        </departamento>
+        <salario>1900.1</salario>
+    </empleado>
+</empleados>
