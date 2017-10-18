@@ -2,6 +2,8 @@ package accesoFicherosXML.serializacion;
 
 import java.io.*;
 
+import com.thoughtworks.xstream.XStream;
+
 //import com.thoughtworks.xstream.XStream;
 
 import accesoFicherosXML.dom.Empleado;
@@ -30,12 +32,11 @@ public class CrearXMLXStreamEmpleadosBin {
 			} catch (EOFException e) {} 
 			
 			// Creamos el fichero XML 
-			// CODIGO A DESCOMENTAR
-			/*XStream xs = new XStream();
+			XStream xs = new XStream();
 			xs.alias("Empleados", ListaEmpleados.class);
 			xs.alias("DatosEmpleado", Empleado.class);
 			xs.addImplicitCollection(ListaEmpleados.class, "lista");
-			xs.toXML(listaEmp, new FileOutputStream("empleadosXStream.xml"));*/
+			xs.toXML(listaEmp, new FileOutputStream("empleadosXStream.xml"));
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

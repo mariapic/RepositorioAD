@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.security.NoTypePermission;
+import com.thoughtworks.xstream.security.NullPermission;
+import com.thoughtworks.xstream.security.PrimitiveTypePermission;
+
 import accesoFicherosXML.dom.Empleado;
 
 /*import com.thoughtworks.xstream.XStream;
@@ -20,7 +25,7 @@ public class LeerXMLXStreamEmpleados {
 		try {
 			// Creamos el fichero XML 
 			// CODIGO A DESCOMENTAR
-			/*XStream xs = new XStream();
+			XStream xs = new XStream();
 			
 			// Limpiamos permisos
 			xs.addPermission(NoTypePermission.NONE);
@@ -46,7 +51,7 @@ public class LeerXMLXStreamEmpleados {
 			for (Empleado emp : listaEmp) {
 				System.out.println("ID: " + emp.getId() + " Nombre: " + emp.getNombre() + " Depto: " 
 						+ emp.getDep() + " Salario: " + emp.getSalario());
-			}*/
+			}
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
